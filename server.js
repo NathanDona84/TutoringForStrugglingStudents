@@ -31,7 +31,11 @@ app.use((req, res, next) => {
     next();
 });
 
-
+app.post('/api/emailForm', async (req, res, next) => {
+    let { from, subject, text } = req.body;
+    let ret = {id: "1", from: from, subject: subject, text: text};
+    res.status(200).json(ret);
+});
 
 
 
