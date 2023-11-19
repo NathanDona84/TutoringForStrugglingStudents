@@ -1,0 +1,105 @@
+/* navbar styling*/
+
+.navbarContainer{
+    width: 100%;
+    height: 80px;
+    background-color: #6faa40;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 10;
+}
+
+.languageContainer{
+    width: 300px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 40px;
+}
+
+.languageIcon{
+    transform: scale(1.6);
+}
+
+.languageToggleContainer{
+    display: flex;
+    margin-left: 25px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.languageToggleLabelEn{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    margin-right: 10px;
+}
+
+.languageToggleLabelSp{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    margin-left: 10px;
+}
+
+.toggleIcon{
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.navlinksContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 500px;
+}
+
+.navLink{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.navLink:hover{
+    cursor: pointer;
+    background-color: #416f1d;
+}
+
+/*logo container styling*/
+
+.logoContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.logo{
+    background-image: url('./images/SFSTLogo.png');
+    width: 700px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.mainContainer{
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    height: calc(100% - 80px);
+    overflow-y: scroll;
+}
+
+.mainContainer::-webkit-scrollbar {
+    display: none;
+}
