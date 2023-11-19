@@ -7,7 +7,7 @@ import SpanishPage from "./pages/SpanishPage"
 
 export function buildPath(route){
   if(process.env.NODE_ENV == 'production')
-      return 'https://finalfitness-8c822bac59a3.herokuapp.com/' + route;
+      return 'https://tutoringforstrugglingstudents-0e43e84a668a.herokuapp.com/' + route;
   else
       return 'http://localhost:5000/' + route;
 }
