@@ -28,6 +28,7 @@ export default function SpanishPage(props){
                         text: body
                     })
                     .then((response)=>{
+                        setMessage("Email Sent");
                         console.log(response["data"]);
                     });
             }
