@@ -16,7 +16,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-left: 40px;
+    padding-left: calc(10px + 1.5vw);
 }
 
 .languageIcon{
@@ -34,7 +34,7 @@
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 26px;
+    font-size: calc(20px + .4vw);
     margin-right: 10px;
 }
 
@@ -42,7 +42,7 @@
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 26px;
+    font-size: calc(20px + .4vw);
     margin-left: 10px;
 }
 
@@ -63,17 +63,22 @@
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 20px;
+    font-size: calc(14px + .35vw);
     height: 100%;
     display: flex;
     align-items: center;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: calc(5px + .5vw);
+    padding-left: calc(5px + .5vw);
 }
 
 .navLink:hover{
     cursor: pointer;
     background-color: #416f1d;
+}
+
+a{
+    text-decoration: none;
+    height: 100%;
 }
 
 /*logo container styling*/
@@ -102,4 +107,283 @@
 
 .mainContainer::-webkit-scrollbar {
     display: none;
+}
+
+/* about me styling */
+
+.aboutMeContainer{
+    width: 100%;
+    padding: 1.5vw;
+    box-sizing: border-box;
+}
+
+.sectionTitle{
+    width: 100%;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: calc(32px + .6vw);
+    color: #4e2d1e;
+}
+
+.introduction{
+    font-size: calc(16px + .35vw);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    padding: 0 3vw;
+}
+
+.introduction p{
+    text-indent: 20px;
+}
+
+.aboutMeContent{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: calc(10px + 1vw) 3vw;
+}
+
+.headshot{
+    background-image: url('./images/TFSSHeadshot.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 800px;
+    width: 500px;
+}
+
+.qualifications{
+    min-width: 500px;
+    margin-left: calc(20px + 8vw);
+}
+
+@media (max-width: 1378px){
+    .qualifications{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: 0;
+        justify-content: center;
+    }
+    .headshot{
+        margin-bottom: 70px;
+    }
+    .qualifications ul{
+        font-size: calc(14px + .3vw) !important;
+    }
+    .subheading{
+        font-size: calc(20px + .6vw) !important;
+    }
+    .experience{
+       width: 50%;
+       min-width: 500px;
+    }
+    .certifications{
+        width: 50%;
+        min-width: 500px;
+    }
+}
+
+.subheading{
+    width: 100%;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: calc(20px + .7vw);
+    color: #4e2d1e;
+}
+
+.qualifications ul{
+    list-style-type: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: calc(14px + .35vw);
+}
+
+.specification{
+    margin-left: 20px;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+/* testimonials styling */
+
+.testimonialsContainer{
+    width: 100%;
+    padding: 1.5vw;
+    box-sizing: border-box;
+    margin-top: 80px;
+}
+
+.testimonials{
+    width: 100%;
+    padding: 0 3vw;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.testimonials ul{
+    list-style-type: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: calc(20px + .4vw);
+    padding: 0;
+}
+
+.testimonials ul li{
+    text-align: center;
+}
+
+.testimonialAuthor{
+    margin-bottom: 70px;
+    font-style: italic;
+}
+
+/* contact me styling */
+
+.contactMeContainer{
+    width: 100%;
+    padding: 1.5vw;
+    box-sizing: border-box;
+}
+
+.email{
+    width: 100%;
+    padding: 0 3vw;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: calc(30px + .4vw);
+}
+
+.orText{
+    width: 100%;
+    padding: 0 3vw;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: calc(20px + .4vw);
+    margin-top: 30px;
+}
+
+.emailFormContainer{
+    width: 100%;
+    padding: 0 3vw;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.emailForm{
+    box-sizing: border-box;
+    width: 80%;
+    min-width: 500px;
+    border: 1px solid #757575;
+    border-radius: 10px;
+    margin-top: 40px;
+    padding: 25px;
+}
+
+.emailMessage{
+    height: 30px;
+    width: 100%;
+    text-align: center;
+    color: red;
+}
+
+.emailSection{
+    margin-top: 20px;
+}
+
+.emailLabel{
+    display: block;
+}
+
+.emailInput{
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    background-color: #eee;
+    padding: 12px 15px;
+    margin: 5px 0;
+}
+
+.emailTextArea{
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    height: 300px;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    background-color: #eee;
+    padding: 12px 15px;
+    margin: 5px 0;
+}
+
+.sendEmail{
+    border-radius: 20px;
+    border: 1px solid #365a18;
+    background-color: #365a18;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 12px 45px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    cursor: pointer;
+    width: 200px;
+    margin-left: calc((100% - 200px) / 2);
+    margin-top: 20px;
+  }
+  
+  .sendEmail:active{
+    transform: scale(0.95);
+  }
+
+  .sendEmail:hover{
+    background-color: #294512;
+  }
+
+/* footer styling */
+
+.footerContainer{
+    width: 100%;
+    height: 120px;
+    background-color: #365a18;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.disclaimer{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.copyright{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: white;
+    font-size: 16px;
+    text-align: center;
 }
