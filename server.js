@@ -33,7 +33,35 @@ app.use((req, res, next) => {
 
 app.post('/api/emailForm', async (req, res, next) => {
     let { from, subject, text } = req.body;
-    let ret = {id: "1", from: from, subject: subject, text: text};
+    let ret = {};
+    let error = "";
+
+    let smtpTransport = nodemailer.createTransport({
+        host: 'smtp.zoho.com',
+        secure: true,
+        auth: {
+            user: process.env.NODEMAILER_EMAIL,
+            pass: process.env.NODEMAILER_PASSWORD
+        }
+    });
+
+    mailOptions={
+        to : process.env.NODEMAILER_EMAIL,
+        from: process.env.NODEMAILER_EMAIL,
+        subject : "Tutoring Services Inquiry",
+        html: "Hello,<br> You have recieved an inquiry from your webite.<br><br> Email From: "+from+"<br><br> Subject: "+subject+"<br><br> Body: "+text+""
+    }
+    console.log(mailOptions);
+    smtpTransport.sendMail(mailOptions, function(e, response){
+        if(e){
+            error = e;
+        }
+        else{
+            console.log("Message sent: " + response.message);
+        }
+    });
+
+    ret["error"] = error;
     res.status(200).json(ret);
 });
 
