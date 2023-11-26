@@ -5,9 +5,9 @@ const cors = require('cors');
 const path = require('path');
 const { error } = require('console');
 require('dotenv').config();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 const app = express();
-app.set('port', (process.env.PORT || 5000));
+app.set('port', (process.env.PORT || 5001));
 
 if (process.env.NODE_ENV === 'production'){
     app.use(express.static('appfrontend/build'));
